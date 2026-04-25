@@ -1,5 +1,7 @@
 # Open Source Portfolio
 
+Languages: English | [简体中文](README.zh-CN.md)
+
 A deployment-first portfolio template for students, independent developers, and new open source maintainers.
 
 It is built with React, TypeScript, and Vite, with GitHub Pages deployment already wired in. The default content is tuned for a full-stack developer who wants to show practical projects, deployment ability, and contribution readiness.
@@ -80,7 +82,6 @@ open-source-portfolio/
 
 ## Good First Issues
 
-- Add a Chinese README.
 - Add a resume download button.
 - Add a project detail page.
 - Add a theme switcher.
