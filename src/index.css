@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=IBM+Plex+Mono:wght@500;700&family=Manrope:wght@500;700;800&display=swap');
+
+:root {
+  --paper: #f6f1e7;
+  --ink: #0f1f1e;
+  --muted: #57615e;
+  --rust: #bd5539;
+  --line: rgba(15, 31, 30, 0.18);
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Manrope, Avenir, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+::selection {
+  color: #fffaf0;
+  background: var(--rust);
+}
