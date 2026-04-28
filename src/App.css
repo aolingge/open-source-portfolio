@@ -233,6 +233,7 @@ h3 {
 }
 
 .intro,
+.services,
 .work,
 .process {
   width: min(1180px, calc(100% - 40px));
@@ -253,12 +254,69 @@ h3 {
   line-height: 1.75;
 }
 
+.services {
+  padding-bottom: clamp(76px, 10vw, 130px);
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
   gap: 40px;
   align-items: end;
   margin-bottom: 34px;
+}
+
+.offer-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.offer {
+  display: grid;
+  gap: 26px;
+  min-height: 360px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid var(--line);
+  background: #fffaf0;
+}
+
+.offer p {
+  margin-bottom: 14px;
+  color: var(--rust);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.offer span {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.offer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.offer li {
+  padding: 7px 10px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  border: 1px solid var(--line);
+  background: rgba(246, 241, 231, 0.72);
+}
+
+.offer .button {
+  align-self: end;
+  width: fit-content;
 }
 
 .project-list {
@@ -429,6 +487,7 @@ footer a {
 
   .signals,
   .intro,
+  .offer-list,
   .process {
     grid-template-columns: 1fr;
   }

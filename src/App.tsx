@@ -13,19 +13,28 @@ type Signal = {
   label: string
 }
 
+type Offer = {
+  title: string
+  price: string
+  summary: string
+  details: string[]
+  href: string
+}
+
 const profile = {
   name: 'Aolingge',
   role: 'Full-stack Developer',
-  headline: 'Builds practical web tools, deployment workflows, and student-friendly open source projects.',
+  headline: 'Builds agent-era safety tools, deployment workflows, and small open source systems that are easy to run again.',
   location: 'China -> Germany track',
   email: '153434584+aolingge@users.noreply.github.com',
   github: 'https://github.com/aolingge',
+  audit: 'https://github.com/aolingge/agent-secret-guard/blob/main/docs/ai-agent-repo-safety-audit.md',
 }
 
 const signals: Signal[] = [
-  { value: '01', label: 'Deployment-first engineering portfolio' },
-  { value: 'TS', label: 'React, TypeScript, Spring Boot, Nginx' },
-  { value: 'OSS', label: 'Built for forks, issues, and pull requests' },
+  { value: '24h', label: 'Focused AI agent repo safety audits' },
+  { value: 'TS', label: 'TypeScript CLIs, GitHub Actions, and release checks' },
+  { value: 'OSS', label: 'Open source tools built with safe contribution paths' },
 ]
 
 const projects: Project[] = [
@@ -62,6 +71,25 @@ const workflow = [
   'Make contribution paths obvious',
 ]
 
+const offers: Offer[] = [
+  {
+    title: 'AI Agent Repo Safety Audit',
+    price: 'from $49',
+    summary:
+      'A focused 24h Markdown report for AI agent, MCP, GitHub Actions, and local automation repositories before launch.',
+    details: ['MCP args', 'agent instructions', 'browser profiles', 'CI permissions'],
+    href: profile.audit,
+  },
+  {
+    title: 'Fix PR',
+    price: 'from $299',
+    summary:
+      'A scoped pull request that moves risky examples to safer config patterns after an audit.',
+    details: ['env templates', 'workflow permissions', 'safe docs copy', 'release checklist'],
+    href: 'https://github.com/aolingge/agent-secret-guard/blob/main/docs/sample-audit-report.md',
+  },
+]
+
 function App() {
   return (
     <main>
@@ -83,6 +111,7 @@ function App() {
         </div>
 
         <nav className="nav" aria-label="Primary navigation">
+          <a href="#services">Services</a>
           <a href="#work">Work</a>
           <a href="#process">Process</a>
           <a href={profile.github}>GitHub</a>
@@ -93,8 +122,8 @@ function App() {
           <h1 id="hero-title">{profile.name}</h1>
           <p className="hero__lead">{profile.headline}</p>
           <div className="hero__actions" aria-label="Profile actions">
-            <a className="button button--primary" href="#work">
-              View work
+            <a className="button button--primary" href="#services">
+              Book audit
             </a>
             <a className="button button--ghost" href={`mailto:${profile.email}`}>
               Contact
@@ -115,11 +144,38 @@ function App() {
       <section className="intro" aria-labelledby="intro-title">
         <div>
           <p className="eyebrow">{profile.location}</p>
-          <h2 id="intro-title">A portfolio template for developers who want proof, not decoration.</h2>
+          <h2 id="intro-title">Small tools and audits for safer agent-era releases.</h2>
         </div>
         <p>
-          This open source portfolio focuses on projects, deployment evidence, and contribution-friendly structure. Fork it, edit the data, and publish it with GitHub Pages.
+          I build local-first scanners and release helpers for developers shipping with AI coding agents, MCP servers, and automation-heavy repositories.
         </p>
+      </section>
+
+      <section className="services" id="services" aria-labelledby="services-title">
+        <div className="section-heading">
+          <p className="eyebrow">Services</p>
+          <h2 id="services-title">Launch-readiness help</h2>
+        </div>
+
+        <div className="offer-list">
+          {offers.map((offer) => (
+            <article className="offer" key={offer.title}>
+              <div>
+                <p>{offer.price}</p>
+                <h3>{offer.title}</h3>
+                <span>{offer.summary}</span>
+              </div>
+              <ul aria-label={`${offer.title} scope`}>
+                {offer.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+              <a className="button button--ghost" href={offer.href}>
+                View details
+              </a>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="work" id="work" aria-labelledby="work-title">
