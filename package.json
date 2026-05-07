@@ -2,7 +2,7 @@
   "name": "open-source-portfolio",
   "private": false,
   "version": "1.0.0",
-  "description": "A deployment-first open source portfolio template for students and independent developers.",
+  "description": "A bilingual portfolio and service page for Aolingge's public projects and delivery workflows.",
   "license": "MIT",
   "repository": {
     "type": "git",
