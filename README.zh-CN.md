@@ -2,15 +2,16 @@
 
 语言： [English](README.md) | 简体中文
 
-一个面向学生、独立开发者和开源维护者的作品集与轻量服务页模板，重点展示项目证据、部署能力、可维护的开源结构和明确的付费服务入口。
+一个面向学生、独立开发者和开源维护者的双语作品集与轻量服务页模板，重点展示项目证据、部署能力、可维护的开源结构和明确的服务入口。
 
-它使用 React、TypeScript 和 Vite 构建，已经配置好 GitHub Pages 自动部署。默认内容适合想展示全栈能力、部署经验、开源协作能力和可购买服务的开发者。
+它使用 React、TypeScript 和 Vite 构建，已经配置好 GitHub Pages 自动部署。默认内容适合想展示全栈能力、部署经验、开源协作能力、发布证据和可购买服务的开发者。
 
 ## 为什么做这个项目
 
 很多作品集模板只强调装饰效果。这个模板更强调“可信证据”：
 
 - 展示有工程背景的项目。
+- 支持中英文双语切换，且标题与描述会同步更新。
 - 展示范围明确的服务套餐。
 - 源码结构简单，方便快速改成自己的内容。
 - 已包含 GitHub Pages 部署工作流。
@@ -37,14 +38,15 @@ npm run preview
 
 ## 自定义内容
 
-编辑 `src/App.tsx` 里的 `profile`、`offers`、`projects` 和 `workflow`。
+编辑 `src/App.tsx` 里的语言内容、`meta`、`profile`、`offers`、`projects` 和 `process`。
 
 常改字段：
 
+- `meta`：中英文页面标题和描述。
 - `profile`：姓名、定位、简介、邮箱、GitHub 链接、审计服务链接。
 - `offers`：服务套餐、范围和链接。
-- `projects`：项目标题、分类、简介、技术栈、链接。
-- `workflow`：页面底部展示的工作方式。
+- `projects`：项目标题、分类、简介、技术栈、主链接和证据链接。
+- `process`：页面底部展示的工作方式。
 
 页面样式在 `src/App.css`，全局主题变量在 `src/index.css`。
 
@@ -73,7 +75,7 @@ https://<你的 GitHub 用户名>.github.io/open-source-portfolio/
 open-source-portfolio/
 ├─ public/                    # 公共视觉资源
 ├─ src/
-│  ├─ App.tsx                 # 页面内容和结构
+│  ├─ App.tsx                 # 双语页面内容和结构
 │  ├─ App.css                 # 页面样式和响应式布局
 │  └─ index.css               # 全局主题和字体
 ├─ .github/workflows/deploy.yml

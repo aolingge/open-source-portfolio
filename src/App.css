@@ -9,7 +9,7 @@ main {
   overflow: hidden;
   color: var(--ink);
   background:
-    linear-gradient(90deg, rgba(246, 241, 231, 0.95), rgba(246, 241, 231, 0.68) 48%, rgba(12, 25, 24, 0.1)),
+    linear-gradient(90deg, rgba(243, 247, 242, 0.96), rgba(243, 247, 242, 0.7) 48%, rgba(12, 25, 24, 0.1)),
     url('/portfolio-workbench.svg') center / cover;
 }
 
@@ -18,7 +18,7 @@ main {
   inset: auto 0 0;
   height: 96px;
   content: '';
-  background: linear-gradient(180deg, rgba(246, 241, 231, 0), var(--paper));
+  background: linear-gradient(180deg, rgba(243, 247, 242, 0), var(--paper));
 }
 
 .nav {
@@ -41,6 +41,30 @@ main {
   transition:
     border-color 180ms ease,
     transform 180ms ease;
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 38px;
+  padding: 0 12px;
+  color: var(--cream);
+  font-weight: 800;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.language-toggle:hover {
+  background: var(--moss);
+  border-color: var(--moss);
+  transform: translateY(-1px);
 }
 
 .nav a:hover {
@@ -70,7 +94,7 @@ h1 {
   margin: 0;
   color: var(--ink);
   font-family: Fraunces, Georgia, serif;
-  font-size: clamp(4.25rem, 17vw, 12rem);
+  font-size: clamp(4.25rem, 11vw, 9.2rem);
   font-weight: 800;
   line-height: 0.84;
 }
@@ -132,12 +156,12 @@ h3 {
 }
 
 .button--primary {
-  color: #fffaf0;
+  color: var(--cream);
   background: var(--ink);
 }
 
 .button--ghost:hover {
-  color: #fffaf0;
+  color: var(--cream);
   background: var(--rust);
   border-color: var(--rust);
 }
@@ -185,7 +209,7 @@ h3 {
 
 .terminal__body {
   padding: clamp(22px, 4vw, 42px);
-  color: #fffaf0;
+  color: var(--cream);
   font-family: 'IBM Plex Mono', Consolas, monospace;
   font-size: clamp(0.9rem, 1.3vw, 1.05rem);
   line-height: 1.8;
@@ -204,7 +228,7 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: #fffaf0;
+  background: var(--cream);
 }
 
 .signals article {
@@ -278,7 +302,7 @@ h3 {
   min-height: 360px;
   padding: clamp(24px, 4vw, 38px);
   border: 1px solid var(--line);
-  background: #fffaf0;
+  background: var(--cream);
 }
 
 .offer p {
@@ -311,7 +335,7 @@ h3 {
   font-size: 0.82rem;
   font-weight: 800;
   border: 1px solid var(--line);
-  background: rgba(246, 241, 231, 0.72);
+  background: rgba(243, 247, 242, 0.72);
 }
 
 .offer .button {
@@ -325,11 +349,9 @@ h3 {
 
 .project {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) minmax(210px, 0.42fr);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr);
   gap: clamp(20px, 4vw, 54px);
   padding: 34px 0;
-  color: inherit;
-  text-decoration: none;
   border-bottom: 1px solid var(--line);
   transition:
     transform 180ms ease,
@@ -339,6 +361,14 @@ h3 {
 .project:hover {
   border-color: var(--rust);
   transform: translateX(8px);
+}
+
+.project__main {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 42px);
+  color: inherit;
+  text-decoration: none;
 }
 
 .project__index,
@@ -359,6 +389,17 @@ h3 {
   line-height: 1.65;
 }
 
+.project .project__index {
+  color: var(--rust);
+  font-weight: 800;
+}
+
+.project__meta {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
 .project ul {
   display: flex;
   flex-wrap: wrap;
@@ -375,7 +416,19 @@ h3 {
   font-size: 0.82rem;
   font-weight: 800;
   border: 1px solid var(--line);
-  background: rgba(255, 250, 240, 0.52);
+  background: rgba(255, 250, 240, 0.68);
+}
+
+.project__proof {
+  width: fit-content;
+  color: var(--moss);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.project__proof:hover {
+  color: var(--rust);
 }
 
 .process {
@@ -412,7 +465,7 @@ h3 {
   height: 34px;
   place-items: center;
   content: counter(step);
-  color: #fffaf0;
+  color: var(--cream);
   font-size: 0.82rem;
   background: var(--rust);
 }
@@ -458,12 +511,13 @@ footer a {
   .hero {
     min-height: 840px;
     background:
-      linear-gradient(180deg, rgba(246, 241, 231, 0.96), rgba(246, 241, 231, 0.9) 58%, rgba(246, 241, 231, 0.62)),
+      linear-gradient(180deg, rgba(243, 247, 242, 0.96), rgba(243, 247, 242, 0.9) 58%, rgba(243, 247, 242, 0.62)),
       url('/portfolio-workbench.svg') 58% top / cover;
   }
 
   .nav {
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .hero__content {
@@ -509,6 +563,11 @@ footer a {
     grid-template-columns: 1fr;
     gap: 16px;
     transform: none;
+  }
+
+  .project__main {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .project:hover {

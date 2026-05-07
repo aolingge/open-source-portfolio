@@ -2,15 +2,16 @@
 
 Languages: English | [简体中文](README.zh-CN.md)
 
-A deployment-first portfolio and lightweight service landing page for students, independent developers, and new open source maintainers.
+A deployment-first bilingual portfolio and lightweight service landing page for students, independent developers, and new open source maintainers.
 
-It is built with React, TypeScript, and Vite, with GitHub Pages deployment already wired in. The default content is tuned for a full-stack developer who wants to show practical projects, deployment ability, contribution readiness, and a clear paid service offer.
+It is built with React, TypeScript, and Vite, with GitHub Pages deployment already wired in. The default content is tuned for Aolingge's public work: practical projects, deployment ability, contribution readiness, release proof, and a clear service offer.
 
 ## Why This Exists
 
 Most portfolio templates focus on decoration. This one focuses on proof:
 
 - selected projects with real engineering context
+- bilingual English / Chinese content with live language switching
 - a focused services section with concrete packages
 - readable source code for fast customization
 - GitHub Pages workflow included
@@ -37,14 +38,15 @@ npm run preview
 
 ## Customize
 
-Edit the profile and project arrays in `src/App.tsx`.
+Edit the profile, locale, and project content in `src/App.tsx`.
 
 Important fields:
 
+- `meta`: page title and description for both languages
 - `profile`: name, role, headline, email, GitHub link, audit service link
 - `offers`: service packages, scope, and links
-- `projects`: project title, category, summary, stack, and link
-- `workflow`: the operating loop shown near the bottom of the page
+- `projects`: project title, category, summary, stack, main link, and proof link
+- `process`: the operating loop shown near the bottom of the page
 
 Visual styling lives in `src/App.css` and global theme variables live in `src/index.css`.
 
@@ -73,7 +75,7 @@ If you rename the repository, update `base` in `vite.config.ts`.
 open-source-portfolio/
 ├─ public/                    # public visual assets
 ├─ src/
-│  ├─ App.tsx                 # portfolio content and page structure
+│  ├─ App.tsx                 # bilingual portfolio content and page structure
 │  ├─ App.css                 # page-level styles and responsive layout
 │  └─ index.css               # global theme and font setup
 ├─ .github/workflows/deploy.yml
