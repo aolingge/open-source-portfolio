@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aolingge/aolingge/main/assets/developer-cover.png" alt="Original decorative artwork for this project" width="100%" />
+</p>
+
 # Open Source Portfolio
 
 Languages: English | [简体中文](README.zh-CN.md)
@@ -5,6 +9,15 @@ Languages: English | [简体中文](README.zh-CN.md)
 A deployment-first bilingual portfolio and lightweight service landing page for students, independent developers, and new open source maintainers.
 
 It is built with React, TypeScript, and Vite, with GitHub Pages deployment already wired in. The default content is tuned for Aolingge's public work: practical projects, deployment ability, contribution readiness, release proof, and a clear service offer.
+
+## Project guide
+
+| Area | Details |
+| --- | --- |
+| **For** | Visitors exploring Aolinge's public work, or developers adapting a bilingual portfolio. |
+| **What is included** | English/Chinese switching, project context, service information and a GitHub Pages deployment workflow. |
+| **Stack** | React, TypeScript and Vite; edit the content in src/App.tsx to adapt the site. |
+| **Start** | [Live portfolio](https://aolingge.github.io/open-source-portfolio/) · [Local setup](#quick-start) · [Customization](#customize) |
 
 ## Why This Exists
 
