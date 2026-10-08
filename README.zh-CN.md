@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aolingge/aolingge/main/assets/developer-cover.png" alt="语言学习主题装饰插画" width="100%" />
+</p>
+
 # Open Source Portfolio
 
 语言： [English](README.md) | 简体中文
@@ -5,6 +9,15 @@
 一个面向学生、独立开发者和开源维护者的双语作品集与轻量服务页模板，重点展示项目证据、部署能力、可维护的开源结构和明确的服务入口。
 
 它使用 React、TypeScript 和 Vite 构建，已经配置好 GitHub Pages 自动部署。默认内容适合想展示全栈能力、部署经验、开源协作能力、发布证据和可购买服务的开发者。
+
+## 项目速览
+
+| 项目 | 说明 |
+| --- | --- |
+| **适合谁** | 了解 Aolinge 公开项目的访客，以及想改造双语作品集的开发者。 |
+| **包含内容** | 中英切换、项目背景、服务介绍与 GitHub Pages 部署工作流。 |
+| **技术与定制** | React、TypeScript、Vite；在 src/App.tsx 修改内容。 |
+| **入口** | [在线作品集](https://aolingge.github.io/open-source-portfolio/) · [English 本地启动](README.md#quick-start) |
 
 ## 为什么做这个项目
 
