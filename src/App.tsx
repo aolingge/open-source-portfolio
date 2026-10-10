@@ -240,29 +240,29 @@ const content: Record<Locale, Content> = {
         '我关注 coding agent、MCP 服务器、GitHub Actions 和本地自动化仓库的发布质量，把容易失控的流程整理成能重复运行、能审查、能交付的工具。',
     },
     services: {
-      eyebrow: 'Services',
+      eyebrow: '服务',
       title: '发布前检查与修复',
       cta: '查看详情',
     },
     offers: [
       {
         title: 'AI Agent 仓库安全审计',
-        price: 'from $49',
+        price: '49 美元起',
         summary:
           '面向 AI Agent、MCP、GitHub Actions 和本地自动化仓库的发布前 Markdown 风险报告。',
         details: ['MCP 参数', 'Agent 指令', '浏览器 profile', 'CI 权限'],
         href: profileLinks.audit,
       },
       {
-        title: 'Fix PR',
-        price: 'from $299',
+        title: '修复 PR',
+        price: '299 美元起',
         summary: '提交一个范围明确的修复 PR，把高风险示例改成更安全的配置、文档和 workflow 默认值。',
         details: ['env 模板', 'workflow 权限', '安全文档', '发布清单'],
         href: 'https://github.com/aolingge/agent-secret-guard/blob/main/docs/sample-audit-report.md',
       },
     ],
     work: {
-      eyebrow: 'Selected Work',
+      eyebrow: '精选项目',
       title: '有实际使用价值的项目',
     },
     projects: [
@@ -295,7 +295,7 @@ const content: Record<Locale, Content> = {
       },
     ],
     process: {
-      eyebrow: 'Process',
+      eyebrow: '交付流程',
       title: '可维护的开源交付循环',
       steps: ['定义最小可用结果', '配套清晰文档和脚本', '用 build、lint、test 和浏览器检查验证', '把贡献和安全入口放清楚'],
     },
@@ -338,7 +338,7 @@ function App() {
           </div>
         </div>
 
-        <nav className="nav" aria-label="Primary navigation">
+        <nav className="nav" aria-label={locale === 'en' ? 'Primary navigation' : '主导航'}>
           <a href="#services">{t.nav.services}</a>
           <a href="#work">{t.nav.work}</a>
           <a href="#process">{t.nav.process}</a>
@@ -357,7 +357,7 @@ function App() {
           <p className="eyebrow">{t.profile.role}</p>
           <h1 id="hero-title">{t.profile.name}</h1>
           <p className="hero__lead">{t.profile.headline}</p>
-          <div className="hero__actions" aria-label="Profile actions">
+          <div className="hero__actions" role="group" aria-label={locale === 'en' ? 'Profile actions' : '个人主页操作'}>
             <a className="button button--primary" href="#services">
               {t.actions.primary}
             </a>
@@ -368,7 +368,7 @@ function App() {
         </div>
       </section>
 
-      <section className="signals" aria-label="Profile signals">
+      <section className="signals" aria-label={locale === 'en' ? 'Profile signals' : '项目特点'}>
         {t.signals.map((signal) => (
           <article key={signal.value}>
             <strong>{signal.value}</strong>
@@ -399,7 +399,7 @@ function App() {
                 <h3>{offer.title}</h3>
                 <span>{offer.summary}</span>
               </div>
-              <ul aria-label={`${offer.title} scope`}>
+              <ul aria-label={`${offer.title} ${locale === 'en' ? 'scope' : '服务范围'}`}>
                 {offer.details.map((detail) => (
                   <li key={detail}>{detail}</li>
                 ))}
@@ -430,7 +430,7 @@ function App() {
                 </div>
               </a>
               <div className="project__meta">
-                <ul aria-label={`${project.title} stack`}>
+                <ul aria-label={`${project.title} ${locale === 'en' ? 'stack' : '技术栈'}`}>
                   {project.stack.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
