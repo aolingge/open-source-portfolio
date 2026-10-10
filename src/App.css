@@ -37,7 +37,8 @@ main {
   padding: 0 14px;
   color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border: 1px solid var(--line);
+  background: var(--paper);
   transition:
     border-color 180ms ease,
     transform 180ms ease;
@@ -87,6 +88,10 @@ main {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--rust);
+}
+
+.hero__content .eyebrow {
+  color: #a5442d;
 }
 
 h1 {
